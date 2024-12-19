@@ -3,7 +3,7 @@ import Link from "next/link";
  import React from "react";
 
 
- const Header = ({Children}:HeaderProps) =>{
+ const Header: React.FC<HeaderProps> = ({ children })=>{
     return (
         <div className="header">
           <Link href="/" className="md:flex-1">
@@ -23,7 +23,7 @@ import Link from "next/link";
              className="mr-2 md:hidden"
             />
           </Link>
-          {Children}
+          {children}
         </div>
     );
 }
